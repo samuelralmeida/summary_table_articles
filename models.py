@@ -7,7 +7,7 @@ class Article(Base):
     id = Column(Integer, primary_key=True)
     titulo = Column(String(50), default=None)
     autor = Column(String(50), default=None)
-    ano = Column(Integer(10), default=None)
+    ano = Column(Integer, default=None)
     local = Column(String(50), default=None)
     objetivos = Column(String(750), default=None)
     delineamento = Column(String(750), default=None)
