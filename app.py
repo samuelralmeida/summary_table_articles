@@ -22,13 +22,22 @@ def createItem():
         desfechos = request.form.get('desfechos', None)
         resultados = request.form.get('resultados', None)
 
+        if ano.isdigit():
+            ano = int(ano)
+        else:
+            ano = None
+
         crud.saveItem(db_session, titulo, autor, ano, local, objetivos,
                       delineamento, discussao, desfechos, resultados )
 
-        return 'created'
+        return redirect(url_for('created'))
 
     else:
         return render_template('createitem.html')
+
+@app.route('/created')
+def created():
+    return render_template('created.html')
 
 if __name__ == '__main__':
     app.debug = True
