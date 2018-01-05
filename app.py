@@ -28,7 +28,7 @@ def createItem():
             ano = None
 
         crud.saveItem(db_session, titulo, autor, ano, local, objetivos,
-                      delineamento, discussao, desfechos, resultados )
+                      delineamento, discussao, desfechos, resultados)
 
         return redirect(url_for('created'))
 

@@ -9,4 +9,4 @@ def saveItem(session, titulo, autor, ano, local, objetivos, delineamento,
 
     session.add(new_item)
     session.commit()
-    return 'add'
+    return 'added'
