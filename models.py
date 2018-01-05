@@ -12,7 +12,7 @@ class Article(Base):
     objetivos = Column(String(750), default=None)
     delineamento = Column(String(750), default=None)
     discussao = Column(String(750), default=None)
-    desfecho = Column(String(750), default=None)
+    desfechos = Column(String(750), default=None)
     resultados = Column(String(750), default=None)
 
     @property
@@ -25,6 +25,6 @@ class Article(Base):
             'objetivos': self.objetivos,
             'delineamento': self.delineamento,
             'discussao': self.discussao,
-            'desfecho': self.desfecho,
+            'desfechos': self.desfechos,
             'resultados': self.resultados
         }
